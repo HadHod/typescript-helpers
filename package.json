@@ -1,0 +1,19 @@
+{
+  "name": "typescript-helpers",
+  "version": "1.0.0",
+  "description": "Some useful code snippets that might be helpful in the future.",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HadHod/typescript-helpers.git"
+  },
+  "author": "Maciej Młynarski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HadHod/typescript-helpers/issues"
+  },
+  "homepage": "https://github.com/HadHod/typescript-helpers#readme"
+}
