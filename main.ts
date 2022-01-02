@@ -1,5 +1,5 @@
-export function partition(predicate: (a: any) => boolean): [any[], any[]] {
-  return this.reduce((result: [any[], any[]], a: any) => {
+export function partition(array: any[], predicate: (a: any) => boolean): [any[], any[]] {
+  return array.reduce((result: [any[], any[]], a: any) => {
     result[predicate(a) ? 0 : 1].push(a);
     return result;
   }, [[], []]);
