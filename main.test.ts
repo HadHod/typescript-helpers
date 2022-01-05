@@ -1,4 +1,4 @@
-import { partition, getNumberOfDigits, isNumber, isArray, getUnique } from './main';
+import { partition, getNumberOfDigits, isNumber, isArray, getUnique, sum } from './main';
 
 describe('partition', () => {
   test('should split array correctly', () => {
@@ -68,5 +68,11 @@ describe('getUnique', () => {
 
   test('should remove duplicates', () => {
     expect(getUnique([1, 1, 2, 2, 3, 4])).toStrictEqual([1, 2, 3, 4]);
+  });
+});
+
+describe('sum', () => {
+  test('should sum up', () => {
+    expect(sum(1, 2, 3, 4)).toBe(10);
   });
 });
