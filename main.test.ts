@@ -1,4 +1,4 @@
-import { partition, getNumberOfDigits, isNumber, isArray, getUnique, sum } from './main';
+import { partition, getNumberOfDigits, isNumber, isArray, getUnique, uniqueBy, sum } from './main';
 
 describe('partition', () => {
   test('should split array correctly', () => {
@@ -68,6 +68,19 @@ describe('getUnique', () => {
 
   test('should remove duplicates', () => {
     expect(getUnique([1, 1, 2, 2, 3, 4])).toStrictEqual([1, 2, 3, 4]);
+  });
+});
+
+describe('uniqueBy', () => {
+  test('should return 3 unique objects', () => {
+    const result = uniqueBy((a: any, b: any) => a.id == b.id, [
+      { id: 0, value: "a" },
+      { id: 1, value: "b" },
+      { id: 2, value: "c" },
+      { id: 1, value: "d" },
+      { id: 0, value: "e" },
+    ]);
+    expect(result).toStrictEqual([{ id: 0, value: 'a' }, { id: 1, value: 'b' }, { id: 2, value: 'c' }]);
   });
 });
 

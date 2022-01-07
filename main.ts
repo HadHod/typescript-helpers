@@ -25,21 +25,8 @@ export function getUnique(array: any[]): any[] {
   return [...new Set(array)];
 }
 
-// uniqueBy(
-//   (a: any, b: any) => a.id == b.id,
-//     [
-//       { id: 0, value: "a" },
-//       { id: 1, value: "b" },
-//       { id: 2, value: "c" },
-//       { id: 1, value: "d" },
-//       { id: 0, value: "e" },
-//     ],
-//   );
-
-// [ { id: 0, value: 'a' }, { id: 1, value: 'b' }, { id: 2, value: 'c' } ]
-
 export function uniqueBy(fn: Function, array: any[]) {
-  array.reduce((acc, v) => {
+  return array.reduce((acc, v) => {
     if (!acc.some((x: any) => fn(v, x))) {
       acc.push(v);
     }
